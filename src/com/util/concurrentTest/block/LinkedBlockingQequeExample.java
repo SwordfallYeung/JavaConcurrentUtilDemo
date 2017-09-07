@@ -1,4 +1,4 @@
-package com.util.concurrentTest;
+package com.util.concurrentTest.block;
 
 import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
@@ -17,6 +17,10 @@ import java.util.concurrent.LinkedBlockingQueue;
  * 如果需要的话，这一链式结构可以选择一个上限。如果没有定义上限，将使用 Integer.MAX_VALUE 作为上限。
  * LinkedBlockingQueue 内部以 FIFO(先进先出)的顺序对元素进行存储。
  * 队列中的头元素在所有元素之中是放入时间最久的那个，而尾元素则是最短的那个。
+ *
+ * LinkedBlockingQueue是一个线程安全的阻塞队列，它实现了BlockingQueue接口，
+ * BlockingQueue接口继承自java.util.Queue接口，并在这个接口的基础上增加了take和put方法，
+ * 这两个方法正是队列操作的阻塞版本。
  **/
 public class LinkedBlockingQequeExample {
 
