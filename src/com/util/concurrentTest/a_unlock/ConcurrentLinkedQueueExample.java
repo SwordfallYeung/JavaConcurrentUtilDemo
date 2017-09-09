@@ -1,4 +1,4 @@
-package com.util.concurrentTest.unlock;
+package com.util.concurrentTest.a_unlock;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.CountDownLatch;
