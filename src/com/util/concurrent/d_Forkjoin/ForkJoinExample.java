@@ -76,7 +76,7 @@ public class ForkJoinExample {
                 System.out.println(name+":老板交代了，要赚"+goalMoney+ " 元,为了买车买房,加油吧....");
                 return makeMoney();
             }else {
-                int subThreadCount=ThreadLocalRandom.current().nextInt(10)+2;
+                int subThreadCount=ThreadLocalRandom.current().nextInt(5)+2;
                 System.out.println(name+":上级要我攒"+goalMoney+",有点多，没事让我"+subThreadCount+"个手下去完成吧，" +
                         "每人攒个"+Math.ceil(goalMoney*1.0/subThreadCount)+"元应该没问题...");
 
