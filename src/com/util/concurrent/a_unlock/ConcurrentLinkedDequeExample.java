@@ -1,4 +1,4 @@
-package com.util.concurrentTest.a_unlock;
+package com.util.concurrent.a_unlock;
 
 import java.util.concurrent.ConcurrentLinkedDeque;
 

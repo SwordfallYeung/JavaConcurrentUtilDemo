@@ -1,6 +1,4 @@
-package com.util.concurrentTest.c_synchronizedUtil;
-
-import org.omg.PortableServer.THREAD_POLICY_ID;
+package com.util.concurrent.c_synchronizedUtil;
 
 import java.util.concurrent.Exchanger;
 

@@ -1,7 +1,6 @@
-package com.util.concurrentTest.c_synchronizedUtil;
+package com.util.concurrent.c_synchronizedUtil;
 
 import java.util.concurrent.Phaser;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author y15079
