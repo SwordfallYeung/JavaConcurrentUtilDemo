@@ -35,7 +35,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * 通常,为了实现Fork/Join任务,需要实现一个以下两个类之一的子类:
  * 1.RecursiveAction 用于任务没有返回值的场景
  *                   ForkJoinTask的实现类，抽象类，compute方法无返回值
- * 2.RecursiveTask 用于任务有返回值的场景.
+ * 2.RecursiveTaskExample 用于任务有返回值的场景.
  *                  ForkJoinTask的实现类，抽象类，compute方法有返回值
  *
  *
@@ -58,7 +58,7 @@ public class ForkJoinExample {
         System.out.println(task.get());
     }
 
-    public static class MakeMoneyTask extends RecursiveTask<Integer>{
+    public static class MakeMoneyTask extends RecursiveTask<Integer> {
         private static final int MIN_GOAL_MONEY=5000;
         private static final AtomicLong employeeNo=new AtomicLong();
 
