@@ -1,4 +1,4 @@
-package com.util.concurrentTest.a_block;
+package com.util.concurrent.a_block;
 
 import java.util.concurrent.PriorityBlockingQueue;
 
