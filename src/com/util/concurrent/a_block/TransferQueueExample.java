@@ -1,4 +1,4 @@
-package com.util.concurrentTest.b_transfer;
+package com.util.concurrent.a_block;
 
 import java.util.Random;
 import java.util.UUID;

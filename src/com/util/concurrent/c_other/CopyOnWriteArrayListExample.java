@@ -1,4 +1,4 @@
-package com.util.concurrentTest.c_other;
+package com.util.concurrent.c_other;
 
 import java.util.ArrayList;
 import java.util.List;

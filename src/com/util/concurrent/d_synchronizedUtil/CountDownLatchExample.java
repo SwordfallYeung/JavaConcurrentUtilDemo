@@ -1,4 +1,4 @@
-package com.util.concurrent.c_synchronizedUtil;
+package com.util.concurrent.d_synchronizedUtil;
 
 import java.util.concurrent.CountDownLatch;
 
