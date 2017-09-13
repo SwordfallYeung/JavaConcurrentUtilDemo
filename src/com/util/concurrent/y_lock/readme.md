@@ -1,0 +1,15 @@
+排他锁：AbstractOwnableSynchronizer、AbstractQueuedLongSynchronizer、AbstractQueuedSynchronizer
+读写锁、可重入锁：ReadWriteLock、ReentrantLock、Lock、ReentrantReadWriteLock(隐式包含读锁和写锁)、Condition、LockSupport
+混合锁：StampedLock
+
+在Java中通常实现锁有两种方式，一种是synchronized关键字，另一种是Lock.二者其实并
+没有什么必然联系，但是各有各的特点，在使用中可以进行取舍的使用。
+
+实现：
+首先最大的不同：synchronized是基于JVM层面实现的，而Lock是基于JDK层面实现的。
+
+使用：
+对于使用者的直观体验上Lock是比较复杂的，需要lock和realse，如果忘记释放锁就会产生死锁的问题，
+所以，通常需要在finally中进行锁的释放。
+但是synchronized的使用十分简单，只需要对自己的方法或这关注的同步对象或类使用synchronized关键字即可。
+

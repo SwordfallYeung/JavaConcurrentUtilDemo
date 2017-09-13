@@ -27,6 +27,8 @@ package com.util.concurrent.z_atomic;
  * AtomicStampedReference.class，  原子更新带有版本号的引用类型    它和前面的AtomicMarkableReference类似，但是它是用来高效表述Object-int这样的“对象+版本号”数据结构，
  * 特别用于解决ABA问题（ABA问题这篇文章里面也有介绍）
  *
+ * 累加器DoubleAccumulator、DoubleAdder、LongAccumulator、LongAdder、Striped64
+ *
  * 在Atomic包里一共提供了13个类，属于4种类型的原子更新方式，
  * 分别是原子更新基本类型、原子更新数组、原子更新引用和原子更新属性（字段）。
  * Atomic包里的类基本都是使用Unsafe实现的包装类。
