@@ -5,7 +5,7 @@ package com.util.concurrent.y_lock;
  * @create: 9/14/17 12:53 AM
  * @desc:
  *
- * Lock为接口
+ * Lock为接口，实现类为ReentrantLock
  *
  * Lock比synchronized关键字更灵活，而且在吞吐量大的时候效率更高，根据JSR-133的定义，
  * 它happens-before的语义和synchronized关键字效果是一模一样的，
