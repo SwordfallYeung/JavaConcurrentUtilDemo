@@ -41,7 +41,7 @@ ThreadFactory.class，线程工厂，用于创建线程
 可以参考：http://blog.csdn.net/suifeng3051/article/details/49444177
 
  */
-public class ExecutorExample {
+public class ThreadPoolExecutorExample {
     public static class findMaxTask implements Callable<Integer>{
         private int start;
         private int end;
