@@ -9,6 +9,13 @@ import java.util.concurrent.TimeUnit;
  * @author y15079
  * @create: 9/15/17 2:35 AM
  * @desc:
+ *
+ * Delayed.class，延迟执行的接口，只有long getDelay(TimeUnit unit)这样一个接口方法
+ScheduledFuture.class，Delayed和Future的共同子接口
+RunnableScheduledFuture.class，ScheduledFuture和RunnableFuture的共同子接口，增加了一个方法boolean isPeriodic()，返回它是否是一个周期性任务，一个周期性任务的特点在于它可以反复执行
+ScheduledExecutorService.class，ExecutorService的子接口，它允许任务延迟执行，相应地，它返回ScheduledFuture
+ScheduledThreadPoolExecutor.class，可以延迟执行任务的线程池
+ *
  */
 public class ScheduledThreadPoolExecutorExample {
 
