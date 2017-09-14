@@ -44,6 +44,7 @@ public class ScheduledThreadPoolExecutorExample {
         for(int i=0; i<3; i++){
             Thread.sleep(1000);
             WorkerThread worker = new WorkerThread("do heavy processing");
+
             scheduledThreadPool.schedule(worker, 10, TimeUnit.SECONDS);
         }
 
