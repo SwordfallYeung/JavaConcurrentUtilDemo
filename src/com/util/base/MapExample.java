@@ -26,8 +26,10 @@ public class MapExample {
 	public static void MapToList(Map<String,String> map){
 		//key list
 		List keyList=new ArrayList(map.keySet());
+
 		//value list
 		List valueList=new ArrayList(map.values());
+
 		//key-value list
 		List entryList=new ArrayList(map.entrySet());
 	}
