@@ -1,4 +1,4 @@
-package com.util.base;
+package com.util.base.a_interface;
 
 import java.util.NavigableMap;
 import java.util.TreeMap;
