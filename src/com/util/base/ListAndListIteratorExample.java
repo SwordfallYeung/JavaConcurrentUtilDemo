@@ -19,7 +19,7 @@ import java.util.ListIterator;
     List：特有的方法，凡是可以操作角标的方法都是该体系特有的方法
  *
  */
-public class ListExample {
+public class ListAndListIteratorExample {
 
 
     public static void main(String[] args) {
