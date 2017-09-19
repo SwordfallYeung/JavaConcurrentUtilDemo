@@ -18,11 +18,13 @@ import java.util.*;
  * 前者只有一个参数，后者有两个参数。排序时可以调用java.util.Arrays.sort()来排序对象数组，或是调用集合中的sort()方法就可以按照相应的排序方法进行排序。
  * 方法返回一个基本类型的整型，返回负数表示o1小于o2，返回0表示o1和o2相等，返回正数表示o1大于o2。
  *
+ * Comparable接口将比较代码嵌入自身类中，而Comparator在一个独立的类中实现比较
+ *
  */
-public class ComparableExample {
+public class ComparatorExample {
 
     /**
-     * Comparable
+     * Comparable 类实现Comparable接口
      */
     public static class Person implements Comparable<Person>{
         private String name;
@@ -71,7 +73,7 @@ public class ComparableExample {
     }
 
     /**
-     * Comparator
+     * Comparator  外部定义比较器实现Comparator接口
      */
     public static class Cmp implements Comparator<Person>{
         @Override
