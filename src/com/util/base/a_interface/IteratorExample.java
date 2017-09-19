@@ -15,7 +15,7 @@ import java.util.Iterator;
 　　　　–boolean hasNext()：如果被迭代的集合还元素没有被遍历，则返回true。
 　　　　–Object next()：返回集合里下一个元素。
 　　　　–void remove() ：删除集合里上一次next方法返回的元素
-　　　　–void forEachRemaining(Consumer action)，这是Java 8为Iterator新增的默认方法，该方法可使用Lambda表达式来遍历集合元素。
+　　　　–void forEachRemaining(Consumer action)，这是Java 8为Iterator新增的默认方法，该方法可使用Lambda表达式来遍历集合元素。为每个剩余元素执行给定的操作,直到所有的元素都已经被处理或行动将抛出一个异常
  *
  */
 public class IteratorExample {
