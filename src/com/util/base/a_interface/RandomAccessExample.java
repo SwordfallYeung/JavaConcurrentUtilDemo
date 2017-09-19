@@ -1,9 +1,6 @@
 package com.util.base.a_interface;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author y15079
@@ -45,6 +42,15 @@ public class RandomAccessExample {
 		System.out.println("LinkedList未实现了RandomAccess接口且用Iterator遍历：");
 		noImplRandomAccessTraverse(linkedList); //花了27ms时间
 		//证明没实现RandomAccess接口的LinkedList应该用Iterator遍历快
+	}
+
+	public static void ForOrIterator(List list){
+		if (list instanceof RandomAccess) {
+			for(int m = 0; m < list.size(); m++){}
+		}else{
+			Iterator iter = list.iterator();
+			while(iter.hasNext()){}
+		}
 	}
 
 	private static long startTime=0;
