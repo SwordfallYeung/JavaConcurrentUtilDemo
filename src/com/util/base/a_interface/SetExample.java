@@ -97,7 +97,7 @@ public class SetExample {
 	//如果Set集合中放入的是我们自己定义的一个类类型呢？
 	//注意：一定要定义一个排序规则类实现Comparator接口，与上面的方法类似
 	public static void SortByPeople(){
-       Set<Person> set=new TreeSet<>(new Person());
+       Set<Person> set=new TreeSet<Person>(new PersonComparator());
 
 		Person p1 =  new Person(10);
 		Person p2 =  new Person(20);
@@ -114,7 +114,7 @@ public class SetExample {
 		}
 	}
 
-	public static class Person implements Comparator<Person>{
+	public static class Person {
 		private int score;
 
 		public Person() {
@@ -129,12 +129,15 @@ public class SetExample {
 			return String.valueOf(this.score);
 		}
 
+	}
+
+	public static class PersonComparator implements Comparator<Person>{
 		//默认o1为大，o2为小，正则不变，负则交换
 		@Override
 		public int compare(Person o1, Person o2) {
 //			return o1.score-o2.score;
 //			return 10-20;
-            System.out.println("o1.score:"+o1.score+" "+"o2.score:"+o2.score);
+			System.out.println("o1.score:"+o1.score+" "+"o2.score:"+o2.score);
 			if (o1.score>o2.score){
 				return -1;
 			}else if (o1.score==o2.score){
