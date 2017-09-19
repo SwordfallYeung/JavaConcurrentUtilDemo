@@ -28,6 +28,8 @@ package com.util.base.b_class;
  * 9.toArray(), toArray(T[] contents) 转换成数组：
  * 10.toString() 把内容转换成一个 String 进行展示:
  *
+ * AbstractCollection: http://blog.csdn.net/u011240877/article/details/52829912
+ *
  */
 public class AbstractCollectionExample {
 }
