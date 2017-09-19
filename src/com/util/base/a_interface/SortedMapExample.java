@@ -27,12 +27,12 @@ public class SortedMapExample {
 		System.out.println("======================================================");
 
 		SortedMap<String,String> sort=new TreeMap<String,String>(map);
-		Set<Map.Entry<String,String>> entry=sort.entrySet();
-		Iterator<Map.Entry<String,String>> it=entry.iterator();
+		Set<Map.Entry<String,String>> set=sort.entrySet();
+		Iterator<Map.Entry<String,String>> it=set.iterator();
 		while(it.hasNext())
 		{
-			Map.Entry<String,String> entry1=it.next();
-			System.out.println("排序之后:"+entry1.getKey()+" 值"+entry1.getValue());
+			Map.Entry<String,String> entry=it.next();
+			System.out.println("排序之后:"+entry.getKey()+" 值"+entry.getValue());
 		}
 	}
 }
