@@ -30,7 +30,7 @@ package com.util.base.b_class;
    而 AbstractSequentialList 只支持迭代器按顺序 访问，不支持 RandomAccess，所以遍历 AbstractSequentialList 的子类，使用 for 循环 get() 的效率要 <= 迭代器遍历：
  *  get()太慢，还不如用迭代器：
  *
- *
+ *AbstractSequentialList: http://blog.csdn.net/u011240877/article/details/52854681
  */
 public class AbstractSequentialListExample {
 }
