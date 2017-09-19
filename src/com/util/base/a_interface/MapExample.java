@@ -6,6 +6,15 @@ import java.util.*;
  * @author y15079
  * @create 2017-09-18 19:34
  * @desc
+ *
+ * 标准的Java类库中包含了几种不同的Map：HashMap, TreeMap, LinkedHashMap, WeakHashMap, IdentityHashMap。
+ * [1]HashMap          HashMap就是使用对象的hashCode()进行快速查询的。此方法能够显着提高性能。Map基于散列表的实现。插入和查询“键值对”的开销是固定的。可以通过构造器设置容量capacity和负载因子load factor，以调整容器的性能。
+ * [2]LinkedHashMap    类似于HashMap，但是迭代遍历它时，取得“键值对”的顺序是其插入次序，或者是最近最少使用(LRU)的次序。只比HashMap慢一点。而在迭代访问时发而更快，因为它使用链表维护内部次序。
+ * [3]TreeMap          基于红黑树数据结构的实现。查看“键”或“键值对”时，它们会被排序(次序由Comparabel或Comparator决定)。TreeMap的特点在于，你得到的结果是经过排序的。TreeMap是唯一的带有subMap()方法的Map，它可以返回一个子树
+ * [4]WeakHashMap      弱键(weak key)Map，Map中使用的对象也被允许释放: 这是为解决特殊问题设计的。如果没有map之外的引用指向某个“键”，则此“键”可以被垃圾收集器回收
+ * [5]IdentifyHashMap  使用==代替equals()对“键”作比较的hash map。专为解决特殊问题而设计
+ *
+ *
  * Map是一个由键值对组成的数据结构，且在集合中每个键是唯一的。
  * 下面就以K和V来代表键和值，来说明一下java中关于Map的九大问题。
  **/
