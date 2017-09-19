@@ -25,6 +25,7 @@ package com.util.base.b_class;
  * AbstractMap 中的内部类:
  * [1] SimpleImmutableEntry, 表示一个不可变的键值对
  * [2] SimpleEntry, 表示可变的键值对
+ * SimpleEntry 与 SimpleImmutableEntry 唯一的区别就是支持 setValue() 操作
  *
  * 和 AbstractCollection 接口，AbstractList 接口 作用相似， AbstractMap 是一个基础实现类，实现了 Map 的主要方法，默认不支持修改。
  * 常用的几种 Map, 比如 HashMap, TreeMap, LinkedHashMap 都继承自它。
