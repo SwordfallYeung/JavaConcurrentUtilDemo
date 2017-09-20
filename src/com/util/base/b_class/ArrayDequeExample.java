@@ -44,6 +44,8 @@ import java.util.*;
    输出样例：
    7 6
  *
+ * ArrayDeque： http://www.jb51.net/article/81653.htm
+ *
  **/
 public class ArrayDequeExample {
 
