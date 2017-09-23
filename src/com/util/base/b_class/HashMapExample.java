@@ -10,6 +10,8 @@ import java.util.*;
  * HashMap 和 HashSet 是 Java Collection Framework 的两个重要成员，其中 HashMap 是 Map 接口的常用实现类，HashSet 是 Set 接口的常用实现类。
  * 虽然 HashMap 和 HashSet 实现的接口规范不同，但它们底层的 Hash 存储机制完全一样，甚至 HashSet 本身就采用 HashMap 来实现的。
  *
+ * http://blog.csdn.net/woshisap/article/details/6887417
+ *
  **/
 public class HashMapExample {
 
