@@ -39,6 +39,42 @@ public class HashSetExample {
 		public String toString() {
 			return "\n姓名："+this.name+"  性别："+this.sex+"  身高："+this.hei+"  体重："+this.wei;
 		}
+
+		//以下例子先定义了Person类，然后定义了一个HashSet，并加入了5个Person到该集合，其中1个人加入了两次
+		//Jack是同一个人，却在集合中出现了两次，这是什么原因呢？这是因为，Person是Object的子类，
+		// 而Object类的equals()方法是根据对象的内存地址来判断两个对象是否相等的，
+		// 由于两次插入的Jack的内存地址肯定不相同，所以判断的结果是不相等，所以两次都插入了。
+		// 于是，我们需要覆写equals()方法来判断两个对象是否是同一个对象。
+
+		@Override
+		public boolean equals(Object obj) {
+			// 地址相等，则肯定是同一个对象
+			if(this==obj){
+				return true;
+			}
+
+			// 类型不同，则肯定不是同一类对象
+			if(!(obj instanceof Person)){
+				return false;
+			}
+
+			// 类型相同，向下转型
+			Person per=(Person) obj;
+			// 如果两个对象的姓名和性别相同，则是同一个人
+			if(this.name.equals(per.name)&&this.sex.equals(per.sex))
+				return true;
+			return false;
+		}
+
+		//Jack仍然被插入了两次，这是什么原因呢？这是因为Object的Hash码返回的是对象的Hash地址，而两个对象的Hash地址肯定是不相等的，
+		// 所以6次插入的对象被存储在6个存储区域，equals()方法根本没有运行。于是，还需要覆写hashCode()方法，根据姓名来计算对象的Hash码
+
+		@Override
+		public int hashCode() {
+			return this.name.hashCode();
+		}
+
+		//Jack只插入了一次，终于正确了。如果根据性别来计算对象的Hash码，结果也是正确的，Jack也只会被插入1次。但是，如果两个对象的性别不同，则会插入两次
 	}
 
 	public static void main(String[] args) {
@@ -51,4 +87,8 @@ public class HashSetExample {
 		mySet.add(new Person("Jack","Male",190.0,95.0));
 		System.out.println(mySet);
 	}
+
+
+
+
 }
