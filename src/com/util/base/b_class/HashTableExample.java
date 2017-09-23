@@ -44,6 +44,7 @@ import java.util.Hashtable;
 　　public synchronized Enumeration elements()
 　　返回元素对应的枚举对象。
  *
+ * http://blog.csdn.net/zhna123_2011/article/details/6741479
  */
 public class HashTableExample {
     public static void main(String[] args) {
