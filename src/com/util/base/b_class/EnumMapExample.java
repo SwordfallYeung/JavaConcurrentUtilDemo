@@ -11,6 +11,8 @@ import java.util.Map;
  * Map的实现类有很多种，EnumMap从名字我们可以看出这个Map是给枚举类用的。
  * 它的key为枚举元素，value自定义。
  *
+ *
+ * http://blog.csdn.net/u013256816/article/details/50916581
  */
 public class EnumMapExample {
     public enum Color{
