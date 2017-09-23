@@ -12,7 +12,7 @@ import java.util.*;
  *而事件源则有一个事件监听器列表，当事件触发时，通知所有的监听者，采用的是观察者模式 (发布-订阅模式)。
  *
  **/
-public class EventListenerProxyExample {
+public class EventObjectAndEventListenerProxyExample {
 
 //	EventListenerProxy 的子类作为将指定属性与其侦听器关联的方法，可能由 getListeners() 方法返回。
 
