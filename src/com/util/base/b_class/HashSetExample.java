@@ -20,6 +20,7 @@ import java.util.Set;
  *Java中实现了Hash的集合是HashSet。HashSet查找某个对象时，首先用hashCode()方法计算出这个对象的Hash码，
  * 然后再根据Hash码到相应的存储区域用equals()方法查找，从而提高了效率。由于是集合，所以同一个对象只能有一个。
  *
+ * http://www.cnblogs.com/mstk/p/4639542.html
  **/
 public class HashSetExample {
 	public static class Person{
