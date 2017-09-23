@@ -9,6 +9,7 @@ import java.util.Date;
  * @author y15079
  * @create: 9/21/17 12:52 AM
  * @desc:
+ * Calendar 为抽象类 ，子类为GregorianCalendar
  *
  * Java Calendar 类时间操作，这也许是创建和管理日历最简单的一个方案，示范代码很简单。
    演示了获取时间，日期时间的累加和累减，以及比较。
@@ -24,8 +25,40 @@ import java.util.Date;
    Calendar.FRIDAY = 6
    Calendar.SATURDAY = 7
  *
+ * 日历类 主要涉及两个类，一个就是抽象类 Calendar类，另一个是他的子类GregorianCalendar。
+ *
+ * 1，主要字段：
+   YEAR（年份）
+   MONTH（月份从0开始）
+   DATE(一月的某天)
+   HOUR（指示上午或下午的小时）
+   HOUR_F_DAY(指示一天中的小时。)
+   DAY_OF_WEEK （一个星期中的某天）
+   DAY_OF_MONTH（一个月中的某天）
+   DAY_OF_YEAR（一年中的某天）
+   DAY_OF_WEEK _IN_MONTH（一个月中的第几个星期）
+   WEEK_OF_MONTH  (指示当前月中的星期数)
+   WEEK_OF_YEAR(指示当前年中的星期数)
+ * 2，得Calendar类对象。
+ //通过 Calendar类的静态方法getInstance获得。
+   Calendar  ca = Calendar.getInstance();
+ *
+ * 3，主要方法
+   void set(int field,int value)//field日历类的参数，比如YEAR   MONTH   DATE 等...
+   void set(int year,int month,int date)//设置年月日。
+   void set(int year, int month, int date, int hourOfDay, int minute)//设置年月日时分
+   void set(int year, int month, int date, int hourOfDay, int minute, int second)//设置年月日时分秒
+   void setTime(Date date);//使用给定的 Date 设置此 Calendar 的时间。
+
+    int  get(int field)//返回给定日历字段的值。如：int month = acobj.get(Calendar.MONTH);
+    Date getTime()//返回一个表示此 Calendar 时间值的 Date 对象。
+    long getTimeInMillis()//返回从1970.1.1   00：00：00到该日历的毫秒数。
+
+    void add(int field,amont);//根据日历的规则，为给定的日历字段添加或减去指定的时间量。可加减。如：caobj.add(Calendar.MONTH,1)下一个月。
  *
  *   原文地址：blog.csdn.net/joyous/article/details/9630893
+ *
+ *   http://blog.csdn.net/liuhenghui5201/article/details/8273259
  */
 public class CalendarExample {
 
