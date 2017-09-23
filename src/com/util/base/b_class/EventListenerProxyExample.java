@@ -14,6 +14,8 @@ import java.util.*;
  **/
 public class EventListenerProxyExample {
 
+//	EventListenerProxy 的子类作为将指定属性与其侦听器关联的方法，可能由 getListeners() 方法返回。
+
 	/**
 	 * 事件类，包含了事件源
 	 *
