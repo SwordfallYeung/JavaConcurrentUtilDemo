@@ -63,6 +63,7 @@ import java.util.Set;
 public class LinkedHashMapExample {
 
     public static void main(String[] args) {
+//        LinkedHashMap可以根据访问顺序排序
         LinkedHashMap<String,String> linkedHashMap=new LinkedHashMap<>(16,0.75f,true);
         linkedHashMap.put("111","111");
         linkedHashMap.put("222","222");
