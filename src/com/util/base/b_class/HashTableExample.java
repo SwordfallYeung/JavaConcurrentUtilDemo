@@ -2,6 +2,8 @@ package com.util.base.b_class;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @author y15079
@@ -59,6 +61,7 @@ public class HashTableExample {
         System.out.println("The size of this hash table is "+hashtable.size());
         //打印hash的内容和大小hashtable.put("Zhejiang","Hangzhou");
 
+        //elements：遍历HashTable的一个方法,HashMap的则为迭代器iterator
         Enumeration enumeration=hashtable.elements();
         System.out.print("The element of hashtable is: ");
         while (enumeration.hasMoreElements()){
@@ -73,5 +76,11 @@ public class HashTableExample {
         //删除关键字Beijing对应对象
         System.out.println("The hashtable hash2 is: "+hashtable);
         System.out.println("The size of this hash table is "+hashtable.size());
+
+        //遍历HashTable的另一个方法,HashMap也行
+        Set<Map.Entry> sets=hashtable.entrySet();
+        for (Map.Entry entry : sets){
+            System.out.println(entry.getKey()+" "+entry.getValue());
+        }
     }
 }
