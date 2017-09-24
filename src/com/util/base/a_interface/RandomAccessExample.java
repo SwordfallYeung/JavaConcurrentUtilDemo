@@ -28,12 +28,12 @@ public class RandomAccessExample {
 	public static void main(String[] args) throws Exception{
 		ArrayList<Integer> arrayList=new ArrayList<Integer>();
 		LinkedList<Integer> linkedList=new LinkedList<Integer>();
-        initList(arrayList,1000);
-        initList(linkedList,1000);
+        initList(arrayList,1000000);
+        initList(linkedList,100000);
 
         System.out.println("ArrayList实现了RandomAccess接口且用for遍历：");
 		implRandomAccessTraverse(arrayList); //花了10ms时间
-		System.out.println("\nArrayList实现了RandomAccess接口且用Iterator遍历：");
+		System.out.println("ArrayList实现了RandomAccess接口且用Iterator遍历：");
 		noImplRandomAccessTraverse(arrayList); //花了39ms时间
 		//证明实现RandomAccess接口的ArrayList应该用for遍历快
 
@@ -65,22 +65,18 @@ public class RandomAccessExample {
 	//有实现RandomAccess接口的遍历全部数据
 	public static void implRandomAccessTraverse(List list){
 		startTime=System.currentTimeMillis();
-		for (int count=0;count<=1000;count++){
 			for (int i=0;i<list.size();i++){
 				list.get(i);
 			}
-		}
 		endTime=System.currentTimeMillis();
 		System.out.println("使用for迭代一共花了"+(endTime-startTime));
 	}
 
 	//没有实现RandomAccess接口的遍历全部数据
 	public static void noImplRandomAccessTraverse(List list){
-		for (int count=0;count<1000;count++){
 			for (Iterator itr=list.iterator();itr.hasNext();){
 				itr.next();
 			}
-		}
 		endTime=System.currentTimeMillis();
 		System.out.println("使用Iterator迭代一共花了"+(endTime-startTime));
 	}
