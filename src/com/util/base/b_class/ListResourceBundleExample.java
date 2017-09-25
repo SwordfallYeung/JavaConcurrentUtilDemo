@@ -9,6 +9,8 @@ import java.util.ResourceBundle;
  * @create: 9/24/17 9:27 PM
  * @desc:
  *
+ * ResourceBundle为抽象类
+ *
  * java.util.ResourceBundle类用来存储文本以及本地化相关数据。
  *
  * ResourceBundle类有两个子类，PropertyResourceBundle及ListResourceBundle。
