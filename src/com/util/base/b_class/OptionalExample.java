@@ -40,6 +40,7 @@ import java.util.function.Consumer;
                   调用结束时，flatMap不会对结果用Optional封装。
  * [11] filter    如果有值并且满足断言条件返回包含该值的Optional，否则返回空Optional。
  *
+ * http://www.importnew.com/6675.html
  **/
 public class OptionalExample {
 
