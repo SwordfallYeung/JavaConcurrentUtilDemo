@@ -35,7 +35,7 @@ import java.util.ResourceBundle;
    [3]资源文件都必须是ISO-8859-1编码，因此，对于所有非西方语系的处理，都必须先将之转换为Java Unicode Escape格式。
       转换方法是通过JDK自带的工具native2ascii.
  *
- *
+ *http://blog.csdn.net/fanxiaobin577328725/article/details/52071310
  */
 public class ResouceBundleExample {
 
