@@ -1,6 +1,7 @@
 package com.util.base.b_class;
 
 import java.io.*;
+import java.util.Locale;
 import java.util.Properties;
 import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
@@ -46,8 +47,14 @@ public class PropertiesFileReadExample {
 	 * @return
 	 */
 	public static String getPath2(){
+		Locale locale=new Locale("zh","CN");
+		locale=new Locale("en","US");
+		ResourceBundle resourceBundle=ResourceBundle.getBundle("myres",locale);
+		path=resourceBundle.getString("aaa");
+
+		/*//这个目前只在windows下可以运行，linux下不行，不知道为什么
 		ResourceBundle resourceBundle=ResourceBundle.getBundle("prop");
-		path=resourceBundle.getString("path");
+		path=resourceBundle.getString("path");*/
 		return path;
 	}
 
@@ -73,7 +80,8 @@ public class PropertiesFileReadExample {
 	 */
 	public static String getPath4(){
 		try {
-			InputStream in=PropertiesFileReadExample.class.getResourceAsStream("JavaConcurrentUtilExample/resources/prop.properties");
+			//以本代码文件为目录起点来获取prop.properties
+			InputStream in=PropertiesFileReadExample.class.getResourceAsStream("prop.properties");
 			Properties properties=new Properties();
 			properties.load(in);
 			path=properties.getProperty("path");
@@ -110,7 +118,7 @@ public class PropertiesFileReadExample {
 	 */
 	public static String getPath6() {
 		InputStream in = ClassLoader
-				.getSystemResourceAsStream("com/test/modul/utils/prop.properties");
+				.getSystemResourceAsStream("prop.properties");
 		Properties p = new Properties();
 		try {
 			p.load(in);
@@ -124,11 +132,11 @@ public class PropertiesFileReadExample {
 
 
 	public static void main(String[] args) {
-		System.out.println(getPath1());
+//		System.out.println(getPath1());
 		System.out.println(getPath2());
-		System.out.println(getPath3());
-		System.out.println(getPath4());
-		System.out.println(getPath5());
-		System.out.println(getPath6());
+//		System.out.println(getPath3());
+//		System.out.println(getPath4());
+//		System.out.println(getPath5());
+//		System.out.println(getPath6());
 	}
 }
