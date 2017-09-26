@@ -9,6 +9,7 @@ import java.util.UUID;
  *
  *    UUID 来作为数据库数据表主键是非常不错的选择，保证每次生成的UUID 是唯一的。
  *
+ * http://www.cnblogs.com/java-class/p/4727698.html
  */
 public class UUIDExample {
 
