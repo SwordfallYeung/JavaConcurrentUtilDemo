@@ -14,7 +14,7 @@ import java.util.TreeMap;
      采用定制排序的时候不需要TreeMap中所有的key必须实现Comparable接口
  *
  * http://blog.csdn.net/chenssy/article/details/26668941
- *
+ *http://blog.csdn.net/myblog_dhy/article/details/44618775
  */
 public class TreeMapExample {
 
