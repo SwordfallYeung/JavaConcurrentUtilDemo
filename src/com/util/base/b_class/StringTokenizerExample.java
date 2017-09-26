@@ -40,6 +40,7 @@ import java.util.StringTokenizer;
  * 一百万以空格区分的字符串，拆分后重新组成不带空格的串。
  *
  * https://my.oschina.net/jasonli0102/blog/272061
+ * http://www.cnblogs.com/junneyang/p/5842937.html
  *
  **/
 public class StringTokenizerExample {
