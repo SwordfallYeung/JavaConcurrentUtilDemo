@@ -17,7 +17,7 @@ public class AtomicReferenceFieldUpdaterExample {
 	public static void main(String[] args) throws Exception{
 		AtomicReferenceFieldUpdater updater=AtomicReferenceFieldUpdater.newUpdater(Dog.class,String.class,"name");
 		Dog dog=new Dog();
-		updater.compareAndSet(dog,dog.name,"test");
+		updater.compareAndSet(dog,dog.name,"serviceloader");
 		System.out.println(dog.name);
 	}
 
