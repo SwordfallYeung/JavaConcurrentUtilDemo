@@ -50,7 +50,7 @@ import java.util.Vector;
    [6] public final synchornized Object lastElement()
      获取向量对象的最后一个obj
  *
- *
+ *http://www.cnblogs.com/zhaoyan001/p/6077492.html
  **/
 public class VectorExample {
 
