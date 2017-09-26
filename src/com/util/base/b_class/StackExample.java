@@ -25,7 +25,7 @@ import java.util.Stack;
    返回对象在堆栈中的位置，以 1 为基数。
  *
  *
- *
+ *http://blog.csdn.net/a19881029/article/details/9408649
  **/
 public class StackExample {
 	//Stack并不要求其中保存数据的唯一性，当Stack中有多个相同的item时，调用search方法，
