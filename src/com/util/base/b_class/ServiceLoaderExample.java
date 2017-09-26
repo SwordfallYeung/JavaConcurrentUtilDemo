@@ -34,8 +34,6 @@ import java.util.ServiceLoader;
  **/
 public class ServiceLoaderExample {
 
-
-
 	public static void main(String[] args) {
 		//need to define related class full name in /META-INF/services/....
 		ServiceLoader<IService> serviceLoader=ServiceLoader.load(IService.class);
