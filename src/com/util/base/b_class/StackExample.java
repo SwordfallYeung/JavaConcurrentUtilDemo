@@ -8,6 +8,8 @@ import java.util.Stack;
  * @create 2017-09-26 14:44
  * @desc
  *
+ * Stack是一个后进先出（last in first out，LIFO）的堆栈，在Vector类的基础上扩展5个方法而来
+ *
  * Stack类为线程安全类 , 继承Vector类
  *
  **/
