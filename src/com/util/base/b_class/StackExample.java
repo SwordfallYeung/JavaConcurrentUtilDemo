@@ -12,6 +12,20 @@ import java.util.Stack;
  *
  * Stack类为线程安全类 , 继承Vector类
  *
+ * Stack方法：
+   E push(E item)
+   把项压入堆栈顶部。
+   E pop()
+   移除堆栈顶部的对象，并作为此函数的值返回该对象。
+   E peek()
+   查看堆栈顶部的对象，但不从堆栈中移除它。
+   boolean empty()
+   测试堆栈是否为空。
+   int search(Object o)
+   返回对象在堆栈中的位置，以 1 为基数。
+ *
+ *
+ *
  **/
 public class StackExample {
 	//Stack并不要求其中保存数据的唯一性，当Stack中有多个相同的item时，调用search方法，
